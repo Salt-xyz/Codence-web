@@ -9,9 +9,8 @@ export const NewsletterSignup = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    setSubmitted(true);
-    // Add your integration logic here (e.g., Mailchimp, API call, etc.)
     console.log("Newsletter signup:", email);
+    setSubmitted(true);
     setEmail("");
   };
 
@@ -26,15 +25,17 @@ export const NewsletterSignup = () => {
         </p>
 
         {submitted ? (
-          <p className="mt-6 text-green-600 font-medium">
-            🎉 You're subscribed! We'll keep you posted.
+          <p className="mt-8 text-green-600 font-semibold text-lg">
+            🎉 You&apos;re subscribed! We&apos;ll keep you posted.
           </p>
         ) : (
           <form
             onSubmit={handleSubmit}
             className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
+            <label htmlFor="newsletter-email" className="sr-only">Email address</label>
             <input
+              id="newsletter-email"
               type="email"
               name="email"
               required

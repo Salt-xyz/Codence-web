@@ -9,7 +9,9 @@ export const ContactForm = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -22,12 +24,12 @@ export const ContactForm = () => {
 
   return (
     <section className="bg-[#F8FBFF] py-20 px-4">
-      <div className="max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-md">
+      <div className="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-3xl shadow-md">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900">
           Contact Us
         </h2>
         <p className="text-center text-gray-500 mt-2 mb-8 max-w-xl mx-auto">
-          We'd love to hear from you. Fill out the form and we'll get back to you shortly.
+          We&apos;d love to hear from you. Fill out the form and we&apos;ll get back to you shortly.
         </p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
@@ -81,7 +83,7 @@ export const ContactForm = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition"
+              className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition"
             >
               Send Message
             </button>
