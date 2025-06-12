@@ -1,3 +1,4 @@
+import '../global.css' 
 import { ContactForm } from "@/components/Contact";
 import Features from "@/components/Features";
 import {Footer} from "@/components/Footer";
